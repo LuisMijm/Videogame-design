@@ -9,6 +9,9 @@ public class CharacterController : MonoBehaviour
     public float forwardSpeed_;
     public float lateralSpeed_;
     public float jumpForce_;
+    public float FallingCastDistance_;
+
+    //public Animator anim_;
 
     Vector3 spawmPoint_;
     public GameObject deathPlane_;
@@ -18,11 +21,12 @@ public class CharacterController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        lateralSpeed_ = 20.0f;
+        lateralSpeed_ = 15.0f;
         forwardSpeed_ = 20.0f;
         spawmPoint_ = new Vector3(-1.2f, 8.54f, -806.29f);
-        jumpForce_ = 0.1f;
+        jumpForce_ = 5.0f;
         rb_ = GetComponent<Rigidbody>();
+        FallingCastDistance_ = 1.0f;
     }
 
 
@@ -106,12 +110,23 @@ public class CharacterController : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if (Input.GetKey(KeyCode.Space))
+        if (Physics.Raycast(this.transform.position, Vector3.down, FallingCastDistance_, LayerMask.GetMask("Floor")))  
         {
-            if (!Physics.Raycast(this.transform.position, Vector3.down, 5.0f))
+            Debug.Log("TouchingGround" + true);
+        
+            //anim_.SetBool("falling_", false);
+
+            if (Input.GetKey(KeyCode.Space))
             {
                 rb_.AddForce(Vector3.up * jumpForce_, ForceMode.Impulse);
             }
         }
+        else
+        {
+            //anim_.SetBool("falling_", true);
+
+            Debug.Log("TouchingGround" + false);
+        }
+        Debug.DrawRay(this.transform.position, Vector3.down * FallingCastDistance_, Color.red);
     }
 }

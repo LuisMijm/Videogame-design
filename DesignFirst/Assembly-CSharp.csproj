@@ -61,6 +61,7 @@
   <ItemGroup>
     <Compile Include="Assets\Games\AutoRunner\Scripts\CharacterController.cs" />
     <Compile Include="Assets\Games\AutoRunner\Scripts\DeathControl.cs" />
+    <Compile Include="Assets\Games\AutoRunner\Scripts\FloorController.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
