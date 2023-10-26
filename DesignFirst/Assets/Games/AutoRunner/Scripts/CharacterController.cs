@@ -10,6 +10,7 @@ public class CharacterController : MonoBehaviour
     public float lateralSpeed_;
     public float jumpForce_;
     public float FallingCastDistance_;
+    public int coins_;
 
     //public Animator anim_;
 
@@ -17,6 +18,9 @@ public class CharacterController : MonoBehaviour
     public GameObject deathPlane_;
 
     public Rigidbody rb_;
+
+    public GameObject floorObj_;
+    public FloorController floorControl_;
     
     // Start is called before the first frame update
     void Start()
@@ -27,6 +31,9 @@ public class CharacterController : MonoBehaviour
         jumpForce_ = 5.0f;
         rb_ = GetComponent<Rigidbody>();
         FallingCastDistance_ = 1.0f;
+        coins_ = 0;
+        floorObj_ = GameObject.Find("FloorObj");
+        floorControl_ = floorObj_.GetComponent<FloorController>();
     }
 
 
@@ -38,6 +45,7 @@ public class CharacterController : MonoBehaviour
     public void ResetPosition()
     {
         this.transform.position = spawmPoint_;
+        coins_ = 0;
     }
 
 
@@ -127,6 +135,24 @@ public class CharacterController : MonoBehaviour
 
             Debug.Log("TouchingGround" + false);
         }
-        Debug.DrawRay(this.transform.position, Vector3.down * FallingCastDistance_, Color.red);
+        // Debug.DrawRay(this.transform.position, Vector3.down * FallingCastDistance_, Color.red);
+
+        
+    }
+
+    void OnTriggerEnter(Collider other)
+    {
+        if(other.gameObject.name == "Coin")
+        {
+            coins_++;
+            other.gameObject.SetActive(false);
+        }
+
+        if(other.gameObject.name == "FloorGeneratorDetect" && floorControl_.generating_ == false)
+        {
+            floorControl_.FirstFloorsGeneration();
+            floorControl_.generating_ = true;
+            Debug.Log("Floors");
+        }
     }
 }
