@@ -11,6 +11,7 @@ public class CharacterController : MonoBehaviour
     public float jumpForce_;
     public float FallingCastDistance_;
     public int coins_;
+    public Camera mainCamera_;
 
     //public Animator anim_;
 
@@ -34,6 +35,7 @@ public class CharacterController : MonoBehaviour
         coins_ = 0;
         floorObj_ = GameObject.Find("FloorObj");
         floorControl_ = floorObj_.GetComponent<FloorController>();
+
     }
 
 
@@ -128,31 +130,46 @@ public class CharacterController : MonoBehaviour
             {
                 rb_.AddForce(Vector3.up * jumpForce_, ForceMode.Impulse);
             }
+            mainCamera_.fieldOfView = Mathf.Lerp(mainCamera_.fieldOfView, 60, 0.1f);
+
+            //mainCamera_.fieldOfView = 60;
         }
         else
         {
             //anim_.SetBool("falling_", true);
 
             Debug.Log("TouchingGround" + false);
+            //mainCamera_.fieldOfView = 80;
+            mainCamera_.fieldOfView = Mathf.Lerp(mainCamera_.fieldOfView, 80, 0.1f);
+
+
         }
         // Debug.DrawRay(this.transform.position, Vector3.down * FallingCastDistance_, Color.red);
 
-        
+
     }
 
     void OnTriggerEnter(Collider other)
     {
-        if(other.gameObject.name == "Coin")
+        if(other.gameObject.tag == "Coin")
         {
             coins_++;
             other.gameObject.SetActive(false);
         }
 
-        if(other.gameObject.name == "FloorGeneratorDetect" && floorControl_.generating_ == false)
+        // Debug.Log(other.gameObject.tag);
+
+        if(other.gameObject.tag == "FloorGenerator" && floorControl_.generating_ == false)
         {
             floorControl_.FirstFloorsGeneration();
             floorControl_.generating_ = true;
             Debug.Log("Floors");
+        }
+
+        if(other.gameObject.tag == "Obstacle")
+        {
+            ResetPosition();
+            floorControl_.ResetFloors();
         }
     }
 }

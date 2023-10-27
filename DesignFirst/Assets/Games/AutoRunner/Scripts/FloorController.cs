@@ -44,8 +44,10 @@ public class FloorController : MonoBehaviour
 
         float x = tr.position.x;
         float y = tr.position.y; // +  Random.Range(0, 10);
-        // float z = tr.position.z + tr.lossyScale.z;
-        float z = tr.position.z + Random.Range(25, 40);
+
+        float z = tr.position.z + tr.localScale.z;
+        //float z = tr.position.z + tr.lossyScale.z;
+        //float z = tr.position.z + Random.Range(25, 40);
 
         // float z = platforms[platforms.Count - 1].transform.position.z + platforms[platforms.Count - 1].width + spacing_;
 
@@ -72,17 +74,28 @@ public class FloorController : MonoBehaviour
 
     public void ResetFloors()
     {
-        foreach(GameObject platform in platforms)
+        // Debug.Log("Reset floors");
+        /*
+         * foreach(GameObject platform in platforms)
         {
             platforms.Remove(platform);
             Destroy(platform.gameObject);
         }
+        */
+
+        for(int i = platforms.Count - 1; i > 0; ++i)
+        {
+            platforms.Remove(platforms[i]);
+            Destroy(platforms[i].gameObject);
+        }
+
         generating_ = false;
     }
 
     public void FirstFloorsGeneration()
     {
         FloorGeneration(spawmFloor_.transform);
+        //platforms[0].transform.position = new Vector3 (0,0,.z += 10;
 
         for(int i = 0; i < 4; ++i)
         {
@@ -92,17 +105,23 @@ public class FloorController : MonoBehaviour
 
     void FloorGeneration()
     {
-        foreach(GameObject platform in platforms)
+        bool keep = true;
+        int count = 0;
+        //foreach(GameObject platform in platforms)
+        for(int i = 0; i < platforms.Count && keep; ++i)
         {
-            if(platform.transform.position.z < (player_.transform.position.z - 10))
+            if(platforms[i].transform.position.z < (player_.transform.position.z - 10))
             {
-                platforms.Remove(platform);
+                // platforms.Remove(platform);
 
-                Destroy(platform.gameObject);
+                // Destroy(platform.gameObject);
 
                 FloorGeneration(platforms[platforms.Count - 1].transform);
+                keep = false;
+                count++;
             }
         }
+        Debug.Log("platform count = " + count);
     }
 
     // Update is called once per frame

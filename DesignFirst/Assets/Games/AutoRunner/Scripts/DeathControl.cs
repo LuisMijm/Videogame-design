@@ -17,7 +17,7 @@ public class DeathControl : MonoBehaviour
 
     private void OnCollisionEnter(Collision other)
     {
-        if(other.gameObject.name == "Player")
+        if(other.gameObject.tag == "Player")
         {
             cc_ = other.gameObject.GetComponent<CharacterController>();
             cc_.ResetPosition();
