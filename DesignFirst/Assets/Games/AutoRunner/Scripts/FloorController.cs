@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 [System.Serializable]
@@ -14,7 +15,9 @@ public class FloorController : MonoBehaviour
 
 
     public List<GameObject> platforms;
-    public List<GameObject> platformPrefabs; 
+    public List<GameObject> platformPrefabs;
+    public List<GameObject> Coins; 
+    public List<GameObject> DestructionList;
     public GameObject player_;
     public GameObject spawmFloor_;
     public GameObject coinPrefab_;
@@ -45,7 +48,7 @@ public class FloorController : MonoBehaviour
         float x = tr.position.x;
         float y = tr.position.y; // +  Random.Range(0, 10);
 
-        float z = tr.position.z + tr.localScale.z;
+        float z = tr.position.z + tr.localScale.z + spacing_;
         //float z = tr.position.z + tr.lossyScale.z;
         //float z = tr.position.z + Random.Range(25, 40);
 
@@ -68,7 +71,9 @@ public class FloorController : MonoBehaviour
                 Random.Range(tempPlatform.transform.position.z, tempPlatform.transform.position.z + tempPlatform.transform.position.z)
             );
 
-            GameObject coin = Instantiate(coinPrefab_, coinPosition, Quaternion.identity);
+            GameObject Coin = Instantiate(coinPrefab_, coinPosition, Quaternion.identity);
+            // coin.transform.LookAt(Vector3.zero);
+            Coins.Add(Coin);
         }
     }
 
@@ -83,11 +88,32 @@ public class FloorController : MonoBehaviour
         }
         */
 
-        for(int i = platforms.Count - 1; i > 0; ++i)
+        for (int i = platforms.Count - 1; i > 0; ++i)
         {
-            platforms.Remove(platforms[i]);
-            Destroy(platforms[i].gameObject);
+            // Destroy(platforms[i].gameObject);
+            DestructionList.Add(platforms[i]);
+            // platforms.Remove(platforms[i]);
+
         }
+        
+
+        for (int i = Coins.Count - 1; i > 0; ++i)
+        {
+            DestructionList.Add(Coins[i]);
+            // platforms.Remove(Coins[i]);
+        }
+
+
+
+        // foreach (GameObject platform in platforms)
+        // {
+        //     DestructionList.Add(platform);
+        //     platforms.Remove(platform);
+        // }
+        // foreach (GameObject coin in Coins)
+        // {
+        //     DestructionList.Add(coin);
+        // }
 
         generating_ = false;
     }
@@ -95,9 +121,14 @@ public class FloorController : MonoBehaviour
     public void FirstFloorsGeneration()
     {
         FloorGeneration(spawmFloor_.transform);
-        //platforms[0].transform.position = new Vector3 (0,0,.z += 10;
+        //platforms[0].transform.position = new Vector3 (0,0, platforms[0].transform.position.z -= 10);
+        Vector3 newPosition = platforms[0].transform.position;
+        // newPosition.z -= Random.Range(15, 20);
+        newPosition.z -= 20;
 
-        for(int i = 0; i < 4; ++i)
+        platforms[0].transform.position = newPosition;
+
+        for (int i = 0; i < 4; ++i)
         {
             FloorGeneration(platforms[i].transform);
         }
@@ -110,18 +141,61 @@ public class FloorController : MonoBehaviour
         //foreach(GameObject platform in platforms)
         for(int i = 0; i < platforms.Count && keep; ++i)
         {
-            if(platforms[i].transform.position.z < (player_.transform.position.z - 10))
+            if (platforms[i] != null)
             {
-                // platforms.Remove(platform);
+                if (platforms[i].transform.position.z < (player_.transform.position.z - 10))
+                {
+                    // platforms.Remove(platform);
 
-                // Destroy(platform.gameObject);
+                    // Destroy(platform.gameObject);
+                    DestructionList.Add(platforms[i]);
 
-                FloorGeneration(platforms[platforms.Count - 1].transform);
-                keep = false;
-                count++;
+                    FloorGeneration(platforms[platforms.Count - 1].transform);
+                    keep = false;
+                    count++;
+                }
             }
         }
-        Debug.Log("platform count = " + count);
+        // Debug.Log("platform count = " + count);
+    }
+
+    void WipeUseless()
+    {
+        if (DestructionList.Count > 0)
+        {
+            for (int i = DestructionList.Count - 1; i >= 0; i--)
+            {
+                Destroy(DestructionList[i]);
+                // DestructionList.Remove(DestructionList[i]);
+
+                // if("GeneratedFloor" == DestructionList[i].tag)
+                // {
+                    
+                // }else if ("Coin" == DestructionList[i].tag)
+                // {
+
+                // }
+            }
+        }
+
+        platforms.RemoveAll(GameObject => GameObject == null);
+        Coins.RemoveAll(GameObject => GameObject == null);
+        DestructionList.RemoveAll(GameObject => GameObject == null);
+
+        // for (int i = platforms.Count - 1; i > 0; ++i)
+        // {
+        //     if (null == platforms[i])
+        //     {
+        //         platforms.Remove(platforms[i]);
+        //     }
+        // }
+        // for (int i = Coins.Count - 1; i > 0; ++i)
+        // {
+        //     if (null == Coins[i])
+        //     {
+        //         platforms.Remove(Coins[i]);
+        //     }
+        // }
     }
 
     // Update is called once per frame
@@ -152,5 +226,7 @@ public class FloorController : MonoBehaviour
         {
             FloorGeneration();
         }
+
+        WipeUseless();
     }
 }

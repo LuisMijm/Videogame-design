@@ -13,7 +13,9 @@ public class CharacterController : MonoBehaviour
     public int coins_;
     public Camera mainCamera_;
 
-    //public Animator anim_;
+    public ParticleSystem particleSystem_;
+
+    public Animator anim_;
 
     Vector3 spawmPoint_;
     public GameObject deathPlane_;
@@ -35,6 +37,7 @@ public class CharacterController : MonoBehaviour
         coins_ = 0;
         floorObj_ = GameObject.Find("FloorObj");
         floorControl_ = floorObj_.GetComponent<FloorController>();
+        anim_ = GetComponent<Animator>();
 
     }
 
@@ -42,12 +45,29 @@ public class CharacterController : MonoBehaviour
     void Run()
     {
         this.transform.Translate(Vector3.forward * forwardSpeed_ * Time.deltaTime);
+        // rb_.velocity = Vector3.forward * forwardSpeed_;
     }
 
     public void ResetPosition()
     {
         this.transform.position = spawmPoint_;
         coins_ = 0;
+    }
+
+    void ActivateParticles()
+    {
+        if (particleSystem_.isPaused)
+        {   
+            particleSystem_.Play();
+        }
+    }
+
+    void DeactivateParticleSystem()
+    {
+        if (particleSystem_.isPlaying)
+        {
+            particleSystem_.Stop();
+        }
     }
 
 
@@ -61,7 +81,7 @@ public class CharacterController : MonoBehaviour
 
         if(Input.GetKey(KeyCode.W))
         {
-            Debug.Log("W");
+            // Debug.Log("W");
             //this.transform.Translate(Vector3.forward * speed_ * Time.deltaTime);
         }
 
@@ -74,7 +94,7 @@ public class CharacterController : MonoBehaviour
 
         if (Input.GetKey(KeyCode.S))
         {
-            Debug.Log("S");
+            // Debug.Log("S");
             //this.transform.Translate(Vector3.back * speed_ * Time.deltaTime);
         }
 
@@ -88,19 +108,19 @@ public class CharacterController : MonoBehaviour
 
         if (Input.GetKey(KeyCode.UpArrow))
         {
-            Debug.Log("Up Arrow");
+            // Debug.Log("Up Arrow");
         }
         if (Input.GetKey(KeyCode.LeftArrow))
         {
-            Debug.Log("Left Arrow");
+            // Debug.Log("Left Arrow");
         }
         if (Input.GetKey(KeyCode.RightArrow))
         {
-            Debug.Log("Right Arrow");
+            // Debug.Log("Right Arrow");
         }
         if (Input.GetKey(KeyCode.DownArrow))
         {
-            Debug.Log("Down Arrow");
+            // Debug.Log("Down Arrow");
         }
 
         // General Controls
@@ -108,7 +128,7 @@ public class CharacterController : MonoBehaviour
 
         if (Input.GetKey(KeyCode.Return))
         {
-            Debug.Log("Enter");
+            // Debug.Log("Enter");
         }
 
         deathPlane_.transform.position = Vector3.Lerp(deathPlane_.transform.position,
@@ -123,6 +143,7 @@ public class CharacterController : MonoBehaviour
         if (Physics.Raycast(this.transform.position, Vector3.down, FallingCastDistance_, LayerMask.GetMask("Floor")))  
         {
             Debug.Log("TouchingGround" + true);
+            anim_.SetBool("ground", true);
         
             //anim_.SetBool("falling_", false);
 
@@ -132,19 +153,19 @@ public class CharacterController : MonoBehaviour
             }
             mainCamera_.fieldOfView = Mathf.Lerp(mainCamera_.fieldOfView, 60, 0.1f);
 
-            //mainCamera_.fieldOfView = 60;
+            DeactivateParticleSystem();
         }
         else
         {
             //anim_.SetBool("falling_", true);
-
+            anim_.SetBool("ground", false);
             Debug.Log("TouchingGround" + false);
             //mainCamera_.fieldOfView = 80;
             mainCamera_.fieldOfView = Mathf.Lerp(mainCamera_.fieldOfView, 80, 0.1f);
 
-
+            ActivateParticles();
         }
-        // Debug.DrawRay(this.transform.position, Vector3.down * FallingCastDistance_, Color.red);
+        Debug.DrawRay(this.transform.position, Vector3.down * FallingCastDistance_, Color.red);
 
 
     }
@@ -163,7 +184,7 @@ public class CharacterController : MonoBehaviour
         {
             floorControl_.FirstFloorsGeneration();
             floorControl_.generating_ = true;
-            Debug.Log("Floors");
+            // Debug.Log("Floors");
         }
 
         if(other.gameObject.tag == "Obstacle")

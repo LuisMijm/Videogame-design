@@ -7,6 +7,7 @@ TagManager:
   - Coin
   - FloorGenerator
   - Obstacle
+  - GeneratedFloor
   layers:
   - Default
   - TransparentFX
