@@ -11,6 +11,7 @@ public class CharacterController : MonoBehaviour
     public float jumpForce_;
     public float FallingCastDistance_;
     public int coins_;
+    public int distance_;
     public Camera mainCamera_;
 
     public ParticleSystem particleSystem_;
@@ -30,11 +31,13 @@ public class CharacterController : MonoBehaviour
     {
         lateralSpeed_ = 15.0f;
         forwardSpeed_ = 20.0f;
-        spawmPoint_ = new Vector3(-1.2f, 8.54f, -806.29f);
+        spawmPoint_ = new Vector3(-1.2f, 8.54f, -785.41f);
+
         jumpForce_ = 5.0f;
         rb_ = GetComponent<Rigidbody>();
         FallingCastDistance_ = 1.0f;
         coins_ = 0;
+        distance_ = 0;
         floorObj_ = GameObject.Find("FloorObj");
         floorControl_ = floorObj_.GetComponent<FloorController>();
         anim_ = GetComponent<Animator>();
@@ -44,14 +47,24 @@ public class CharacterController : MonoBehaviour
 
     void Run()
     {
-        this.transform.Translate(Vector3.forward * forwardSpeed_ * Time.deltaTime);
-        // rb_.velocity = Vector3.forward * forwardSpeed_;
+        // this.transform.Translate(Vector3.forward * forwardSpeed_ * Time.deltaTime);
+        float verticalVelocity = rb_.velocity.y;
+        float sideVelocity = rb_.velocity.x;
+        Vector3 newVelocity;
+
+        newVelocity = Vector3.forward * forwardSpeed_;
+        newVelocity.x = sideVelocity;
+        newVelocity.y = verticalVelocity;
+
+        rb_.velocity = newVelocity;
+
     }
 
     public void ResetPosition()
     {
         this.transform.position = spawmPoint_;
-        coins_ = 0;
+        // coins_ = 0;
+        distance_ = 0;
     }
 
     void ActivateParticles()
@@ -140,9 +153,10 @@ public class CharacterController : MonoBehaviour
 
     private void FixedUpdate()
     {
+        Debug.Log("ground: " + anim_.GetBool("ground"));
         if (Physics.Raycast(this.transform.position, Vector3.down, FallingCastDistance_, LayerMask.GetMask("Floor")))  
         {
-            Debug.Log("TouchingGround" + true);
+            // Debug.Log("TouchingGround" + true);
             anim_.SetBool("ground", true);
         
             //anim_.SetBool("falling_", false);
@@ -150,16 +164,17 @@ public class CharacterController : MonoBehaviour
             if (Input.GetKey(KeyCode.Space))
             {
                 rb_.AddForce(Vector3.up * jumpForce_, ForceMode.Impulse);
+                anim_.SetBool("ground", false);
             }
             mainCamera_.fieldOfView = Mathf.Lerp(mainCamera_.fieldOfView, 60, 0.1f);
 
             DeactivateParticleSystem();
-        }
+        }  
         else
         {
             //anim_.SetBool("falling_", true);
-            anim_.SetBool("ground", false);
-            Debug.Log("TouchingGround" + false);
+            // anim_.SetBool("ground", false);
+            // Debug.Log("TouchingGround" + false);
             //mainCamera_.fieldOfView = 80;
             mainCamera_.fieldOfView = Mathf.Lerp(mainCamera_.fieldOfView, 80, 0.1f);
 
@@ -167,12 +182,13 @@ public class CharacterController : MonoBehaviour
         }
         Debug.DrawRay(this.transform.position, Vector3.down * FallingCastDistance_, Color.red);
 
+        distance_++;
 
     }
 
     void OnTriggerEnter(Collider other)
     {
-        if(other.gameObject.tag == "Coin")
+        if("Coin" == other.gameObject.tag)
         {
             coins_++;
             other.gameObject.SetActive(false);
@@ -180,17 +196,23 @@ public class CharacterController : MonoBehaviour
 
         // Debug.Log(other.gameObject.tag);
 
-        if(other.gameObject.tag == "FloorGenerator" && floorControl_.generating_ == false)
+        if("FloorSpawner" == other.gameObject.tag)
         {
-            floorControl_.FirstFloorsGeneration();
+            Debug.Log("floors");
+            floorControl_.newGeneration();
             floorControl_.generating_ = true;
-            // Debug.Log("Floors");
+
+            Collider otherCollider_;
+            if ((otherCollider_ = other.gameObject.GetComponent<Collider>()) != null)
+            {
+                otherCollider_.enabled = false;
+            }
         }
 
-        if(other.gameObject.tag == "Obstacle")
+        if("Obstacle" == other.gameObject.tag)
         {
             ResetPosition();
-            floorControl_.ResetFloors();
+            // floorControl_.ResetFloors();
         }
     }
 }

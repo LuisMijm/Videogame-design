@@ -5,9 +5,9 @@ TagManager:
   serializedVersion: 2
   tags:
   - Coin
-  - FloorGenerator
   - Obstacle
   - GeneratedFloor
+  - FloorGenerator
   layers:
   - Default
   - TransparentFX

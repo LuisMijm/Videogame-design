@@ -322,6 +322,7 @@
 "Assets/Games/AutoRunner/Scripts/CharacterController.cs"
 "Assets/Games/AutoRunner/Scripts/CoinController.cs"
 "Assets/Games/AutoRunner/Scripts/DeathControl.cs"
+"Assets/Games/AutoRunner/Scripts/DistanceHUDController.cs"
 "Assets/Games/AutoRunner/Scripts/FloorController.cs"
 "Assets/Games/AutoRunner/Scripts/HUDController.cs"
 "Assets/Games/AutoRunner/Scripts/Platform.cs"

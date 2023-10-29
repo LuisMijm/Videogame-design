@@ -20,7 +20,9 @@ public class FloorController : MonoBehaviour
     public List<GameObject> DestructionList;
     public GameObject player_;
     public GameObject spawmFloor_;
+    public GameObject startFloor_;
     public GameObject coinPrefab_;
+    public GameObject floorSpawnerPrefab_;
 
 
     public bool generating_;
@@ -37,7 +39,9 @@ public class FloorController : MonoBehaviour
 
         player_ = GameObject.Find("Player");
         spawmFloor_ = GameObject.Find("Spawm floor");
-        
+        platforms.Add(spawmFloor_);
+        startFloor_ = GameObject.Find("Startfloor");
+        platforms.Add(startFloor_);
         generating_ = false;
     }
 
@@ -55,7 +59,7 @@ public class FloorController : MonoBehaviour
         // float z = platforms[platforms.Count - 1].transform.position.z + platforms[platforms.Count - 1].width + spacing_;
 
 
-        int platformType = Random.Range(0, 2);
+        int platformType = Random.Range(0, 3);
 
         GameObject tempPlatform = Instantiate(platformPrefabs[platformType]);
 
@@ -77,6 +81,65 @@ public class FloorController : MonoBehaviour
         }
     }
 
+    public void newGeneration()
+    {
+        int cPlatformPos_ = platforms.Count - 1;
+        GameObject cPlatform_;
+
+        for(int i = 0; i < 5; ++i)
+        {
+            // Debug.Log("cPlatform_ =" + cPlatformPos_);
+            if (null != (cPlatform_ = platforms[cPlatformPos_]))
+            {
+                FloorGeneration2(cPlatform_.transform);
+                cPlatformPos_++;
+
+                Vector3 coinPosition = new Vector3(
+                    Random.Range(cPlatform_.transform.position.x, cPlatform_.transform.position.x + cPlatform_.transform.position.x),
+                    cPlatform_.transform.position.y + 2.0f,
+                    Random.Range(cPlatform_.transform.position.z, cPlatform_.transform.position.z + cPlatform_.transform.position.z)
+                );
+                GameObject Coin = Instantiate(coinPrefab_, coinPosition, Quaternion.identity);
+                Coins.Add(Coin);
+                
+            }
+        }
+
+
+
+
+        Transform tr; 
+        if((tr = platforms[platforms.Count - 3].transform) != null)
+        {
+            GameObject tempSpawner = Instantiate(floorSpawnerPrefab_);
+            tempSpawner.transform.position = new Vector3(tr.position.x, tr.position.y, tr.position.z);
+        }
+    }
+
+    public void FloorGeneration2(Transform tr)
+    {
+        float xSpacing_ = Random.Range(-10, 10);
+        float ySpacing_ = Random.Range(-10, 10);
+        float zSpacing_ = Random.Range(0, 10);
+
+
+        float x = tr.position.x; // + xSpacing_;
+        float y = tr.position.y; // + ySpacing_;
+
+
+        // float z = tr.position.z + tr.localScale.z + zSpacing_;
+        float z = tr.position.z + tr.lossyScale.z + zSpacing_;
+
+        int platformType = Random.Range(0, 6);
+
+        GameObject tempPlatform = Instantiate(platformPrefabs[platformType]);
+
+        tempPlatform.transform.position = new Vector3(x, y, z);
+
+        platforms.Add(tempPlatform);
+
+    }
+
     public void ResetFloors()
     {
         // Debug.Log("Reset floors");
@@ -88,20 +151,20 @@ public class FloorController : MonoBehaviour
         }
         */
 
-        for (int i = platforms.Count - 1; i > 0; ++i)
-        {
+        // for (int i = platforms.Count - 1; i > 0; ++i)
+        // {
             // Destroy(platforms[i].gameObject);
-            DestructionList.Add(platforms[i]);
+            // DestructionList.Add(platforms[i]);
             // platforms.Remove(platforms[i]);
 
-        }
+        // }
         
 
-        for (int i = Coins.Count - 1; i > 0; ++i)
-        {
-            DestructionList.Add(Coins[i]);
+        // for (int i = Coins.Count - 1; i > 0; ++i)
+        // {
+            // DestructionList.Add(Coins[i]);
             // platforms.Remove(Coins[i]);
-        }
+        // }
 
 
 
@@ -224,9 +287,9 @@ public class FloorController : MonoBehaviour
 
         if(generating_)
         {
-            FloorGeneration();
+            // FloorGeneration();
         }
 
-        WipeUseless();
+        // WipeUseless();
     }
 }
