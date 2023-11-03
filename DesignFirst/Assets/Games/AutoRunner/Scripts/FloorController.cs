@@ -130,7 +130,7 @@ public class FloorController : MonoBehaviour
         // float z = tr.position.z + tr.localScale.z + zSpacing_;
         float z = tr.position.z + tr.lossyScale.z + zSpacing_;
 
-        int platformType = Random.Range(0, 6);
+        int platformType = Random.Range(0, 5);
 
         GameObject tempPlatform = Instantiate(platformPrefabs[platformType]);
 

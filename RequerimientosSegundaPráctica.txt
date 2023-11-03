@@ -1,0 +1,15 @@
+- 2 enemigos básicos que disparan con patrón de movimiento y ataque
+- 1 enemigos boss con dos patrones de movimiento (complejo) y ataque. Maquina de estados para el jefe en ataques y movimientos
+- 1 power up
+- 1 arma pickup
+- Sistema de oleadas (Recomendable por tiempo)
+
+
+
+Documentación:
+
+- explicar mecánicas, personaje (habilidades y movimiento), como funciona la progresión del movimiento.
+
+
+como funciona la sensación de movimiento.
+
