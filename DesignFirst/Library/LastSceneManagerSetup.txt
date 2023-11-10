@@ -1,5 +1,5 @@
 sceneSetups:
-- path: Assets/Scenes/ShootemUpScene.unity
+- path: Assets/Scenes/AutorunnerScene.unity
   isLoaded: 1
   isActive: 1
   isSubScene: 0
