@@ -1,0 +1,467 @@
+Using pre-set license
+Built from '2021.3/staging' branch; Version is '2021.3.18f1 (3129e69bc0c7) revision 3221990'; Using compiler version '192829333'; Build Type 'Release'
+OS: 'Windows 10  (10.0.19045) 64bit Enterprise' Language: 'es' Physical Memory: 16253 MB
+BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 1
+
+COMMAND LINE ARGUMENTS:
+C:\Program Files\Unity 2021.3.18f1\Editor\Unity.exe
+-adb2
+-batchMode
+-noUpm
+-name
+AssetImportWorker2
+-projectPath
+C:/Users/jimenezmu/Documents/Videogame-design/GalacticComrade
+-logFile
+Logs/AssetImportWorker2.log
+-srvPort
+60812
+Successfully changed project path to: C:/Users/jimenezmu/Documents/Videogame-design/GalacticComrade
+C:/Users/jimenezmu/Documents/Videogame-design/GalacticComrade
+[UnityMemory] Configuration Parameters - Can be set up in boot.config
+    "memorysetup-bucket-allocator-granularity=16"
+    "memorysetup-bucket-allocator-bucket-count=8"
+    "memorysetup-bucket-allocator-block-size=33554432"
+    "memorysetup-bucket-allocator-block-count=8"
+    "memorysetup-main-allocator-block-size=16777216"
+    "memorysetup-thread-allocator-block-size=16777216"
+    "memorysetup-gfx-main-allocator-block-size=16777216"
+    "memorysetup-gfx-thread-allocator-block-size=16777216"
+    "memorysetup-cache-allocator-block-size=4194304"
+    "memorysetup-typetree-allocator-block-size=2097152"
+    "memorysetup-profiler-bucket-allocator-granularity=16"
+    "memorysetup-profiler-bucket-allocator-bucket-count=8"
+    "memorysetup-profiler-bucket-allocator-block-size=33554432"
+    "memorysetup-profiler-bucket-allocator-block-count=8"
+    "memorysetup-profiler-allocator-block-size=16777216"
+    "memorysetup-profiler-editor-allocator-block-size=1048576"
+    "memorysetup-temp-allocator-size-main=16777216"
+    "memorysetup-job-temp-allocator-block-size=2097152"
+    "memorysetup-job-temp-allocator-block-size-background=1048576"
+    "memorysetup-job-temp-allocator-reduction-small-platforms=262144"
+    "memorysetup-temp-allocator-size-background-worker=32768"
+    "memorysetup-temp-allocator-size-job-worker=262144"
+    "memorysetup-temp-allocator-size-preload-manager=33554432"
+    "memorysetup-temp-allocator-size-nav-mesh-worker=65536"
+    "memorysetup-temp-allocator-size-audio-worker=65536"
+    "memorysetup-temp-allocator-size-cloud-worker=32768"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gfx=262144"
+Player connection [18200] Host "[IP] 172.17.2.2 [Port] 0 [Flags] 2 [Guid] 2999828157 [EditorId] 2999828157 [Version] 1048832 [Id] WindowsEditor(7,MA2-02) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined multi-casting on [225.0.0.222:54997]...
+
+Player connection [18200] Host "[IP] 172.17.2.2 [Port] 0 [Flags] 2 [Guid] 2999828157 [EditorId] 2999828157 [Version] 1048832 [Id] WindowsEditor(7,MA2-02) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined alternative multi-casting on [225.0.0.222:34997]...
+
+Refreshing native plugins compatible for Editor in 104.92 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Initialize engine version: 2021.3.18f1 (3129e69bc0c7)
+[Subsystems] Discovering subsystems at path C:/Program Files/Unity 2021.3.18f1/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path C:/Users/jimenezmu/Documents/Videogame-design/GalacticComrade/Assets
+GfxDevice: creating device client; threaded=0; jobified=0
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.1]
+    Renderer: AMD Radeon RX 580 2048SP (ID=0x6fdf)
+    Vendor:   ATI
+    VRAM:     8170 MB
+    Driver:   31.0.21018.6011
+Initialize mono
+Mono path[0] = 'C:/Program Files/Unity 2021.3.18f1/Editor/Data/Managed'
+Mono path[1] = 'C:/Program Files/Unity 2021.3.18f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
+Mono config path = 'C:/Program Files/Unity 2021.3.18f1/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56320
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: C:/Program Files/Unity 2021.3.18f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.016481 seconds.
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 104.08 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.950 seconds
+Domain Reload Profiling:
+	ReloadAssembly (950ms)
+		BeginReloadAssembly (131ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (0ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (1ms)
+		EndReloadAssembly (633ms)
+			LoadAssemblies (124ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (140ms)
+			ReleaseScriptCaches (0ms)
+			RebuildScriptCaches (40ms)
+			SetupLoadedEditorAssemblies (380ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (11ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (104ms)
+				BeforeProcessingInitializeOnLoad (2ms)
+				ProcessInitializeOnLoadAttributes (193ms)
+				ProcessInitializeOnLoadMethodAttributes (68ms)
+				AfterProcessingInitializeOnLoad (0ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (0ms)
+Platform modules already initialized, skipping
+Registering precompiled user dll's ...
+Registered in 0.012861 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image C:\Users\jimenezmu\Documents\Videogame-design\GalacticComrade\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image C:\Users\jimenezmu\Documents\Videogame-design\GalacticComrade\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.63 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.459 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1460ms)
+		BeginReloadAssembly (165ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (8ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (24ms)
+		EndReloadAssembly (1124ms)
+			LoadAssemblies (129ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (350ms)
+			ReleaseScriptCaches (1ms)
+			RebuildScriptCaches (75ms)
+			SetupLoadedEditorAssemblies (513ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (9ms)
+				SetLoadedEditorAssemblies (1ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (123ms)
+				ProcessInitializeOnLoadAttributes (312ms)
+				ProcessInitializeOnLoadMethodAttributes (35ms)
+				AfterProcessingInitializeOnLoad (34ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (15ms)
+Platform modules already initialized, skipping
+========================================================================
+Worker process is ready to serve import requests
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.06 seconds
+Refreshing native plugins compatible for Editor in 0.72 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3064 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 24 unused Assets / (113.4 KB). Loaded Objects now: 3526.
+Memory consumption went from 107.9 MB to 107.8 MB.
+Total: 3.756700 ms (FindLiveObjects: 0.301800 ms CreateObjectMapping: 0.288100 ms MarkObjects: 3.043300 ms  DeleteObjects: 0.122600 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 155214.011080 seconds.
+  path: Assets/Space Shooter Template FREE/Prefabs/EnemyWaves/Wave_6 1.prefab
+  artifactKey: Guid(c3ba1d38d0f94244788e0e558778be23) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Space Shooter Template FREE/Prefabs/EnemyWaves/Wave_6 1.prefab using Guid(c3ba1d38d0f94244788e0e558778be23) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '85b7fd44d3808a961cc60f82e1dcafde') in 0.088552 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 31.103980 seconds.
+  path: Assets/Space Shooter Template FREE/Prefabs/VFX/Enemy Explosion PC.prefab
+  artifactKey: Guid(031faf5ef0ec4c34c86671fa3e2e81d1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Space Shooter Template FREE/Prefabs/VFX/Enemy Explosion PC.prefab using Guid(031faf5ef0ec4c34c86671fa3e2e81d1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '13a23bf0e210d6c01c25fb79a3bbbe39') in 0.309413 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000036 seconds.
+  path: Assets/2D Space Kit/Prefabs/Explosion.prefab
+  artifactKey: Guid(cafecd3fc3b761c45bb1553f35cf5c96) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/2D Space Kit/Prefabs/Explosion.prefab using Guid(cafecd3fc3b761c45bb1553f35cf5c96) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cb7ee5e9ef6d99b47e6de44b75040b0b') in 0.039641 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000120 seconds.
+  path: Assets/Space Shooter Template FREE/Prefabs/VFX/EngineFx.prefab
+  artifactKey: Guid(b74db332333018b499e28761076c3582) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Space Shooter Template FREE/Prefabs/VFX/EngineFx.prefab using Guid(b74db332333018b499e28761076c3582) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9fb1d458b1ffbf4d0b2baa2bae8e591f') in 0.033130 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 8.051018 seconds.
+  path: Assets/Space Shooter Template FREE/Prefabs/EnemyWaves/Wave_6 1.prefab
+  artifactKey: Guid(c3ba1d38d0f94244788e0e558778be23) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Space Shooter Template FREE/Prefabs/EnemyWaves/Wave_6 1.prefab using Guid(c3ba1d38d0f94244788e0e558778be23) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '68e49b540977739c2efd69495b3412f4') in 0.013083 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 3.374328 seconds.
+  path: Assets/Space Shooter Template FREE/Prefabs/EnemyWaves/Wave_6 1.prefab
+  artifactKey: Guid(c3ba1d38d0f94244788e0e558778be23) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Space Shooter Template FREE/Prefabs/EnemyWaves/Wave_6 1.prefab using Guid(c3ba1d38d0f94244788e0e558778be23) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bbaf2f5d3e10e27e0c206b2118bb6a91') in 0.013572 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 45.074434 seconds.
+  path: Assets/Space Shooter Template FREE/Prefabs/EnemyWaves/Wave_Boss01.prefab
+  artifactKey: Guid(c3ba1d38d0f94244788e0e558778be23) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Space Shooter Template FREE/Prefabs/EnemyWaves/Wave_Boss01.prefab using Guid(c3ba1d38d0f94244788e0e558778be23) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e49bf90e690d3a1281bb51bd40d23feb') in 0.023263 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 27.759387 seconds.
+  path: Assets/Space Shooter Template FREE/Prefabs/EnemyWaves/Wave_Boss01.prefab
+  artifactKey: Guid(c3ba1d38d0f94244788e0e558778be23) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Space Shooter Template FREE/Prefabs/EnemyWaves/Wave_Boss01.prefab using Guid(c3ba1d38d0f94244788e0e558778be23) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7397bf68532e6a6107ab0bd4bcd9ecc3') in 0.012213 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.765618 seconds.
+  path: Assets/Space Shooter Template FREE/Prefabs/EnemyWaves/Wave_Boss01.prefab
+  artifactKey: Guid(c3ba1d38d0f94244788e0e558778be23) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Space Shooter Template FREE/Prefabs/EnemyWaves/Wave_Boss01.prefab using Guid(c3ba1d38d0f94244788e0e558778be23) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '616ec7afc0732dd0e30180caf1c99af6') in 0.012947 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 13.731105 seconds.
+  path: Assets/Space Shooter Template FREE/Prefabs/EnemyWaves/Wave_Boss01.prefab
+  artifactKey: Guid(c3ba1d38d0f94244788e0e558778be23) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Space Shooter Template FREE/Prefabs/EnemyWaves/Wave_Boss01.prefab using Guid(c3ba1d38d0f94244788e0e558778be23) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '910a54acf80d155ad5989ed281b32fd4') in 0.013308 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 17.084536 seconds.
+  path: Assets/Space Shooter Template FREE/Prefabs/EnemyWaves/Wave_Boss01.prefab
+  artifactKey: Guid(c3ba1d38d0f94244788e0e558778be23) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Space Shooter Template FREE/Prefabs/EnemyWaves/Wave_Boss01.prefab using Guid(c3ba1d38d0f94244788e0e558778be23) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9b6966916254ad11d283d11a27bcb3c4') in 0.013369 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 17.344639 seconds.
+  path: Assets/Space Shooter Template FREE/Prefabs/EnemyWaves/Wave_Boss01.prefab
+  artifactKey: Guid(c3ba1d38d0f94244788e0e558778be23) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Space Shooter Template FREE/Prefabs/EnemyWaves/Wave_Boss01.prefab using Guid(c3ba1d38d0f94244788e0e558778be23) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9cce797ee148cb001623c67524b6dd15') in 0.014184 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 4.224987 seconds.
+  path: Assets/Space Shooter Template FREE/Prefabs/EnemyWaves/Wave_Boss01.prefab
+  artifactKey: Guid(c3ba1d38d0f94244788e0e558778be23) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Space Shooter Template FREE/Prefabs/EnemyWaves/Wave_Boss01.prefab using Guid(c3ba1d38d0f94244788e0e558778be23) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9781e8c89c3ae6e7f7f77bf37f8366f4') in 0.013033 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 50.234239 seconds.
+  path: Assets/Space Shooter Template FREE/Prefabs/EnemyWaves/Wave_Boss01.prefab
+  artifactKey: Guid(c3ba1d38d0f94244788e0e558778be23) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Space Shooter Template FREE/Prefabs/EnemyWaves/Wave_Boss01.prefab using Guid(c3ba1d38d0f94244788e0e558778be23) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1b5aac68f46767ae99d3010ebdeb9d8f') in 0.012355 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 9.293747 seconds.
+  path: Assets/Space Shooter Template FREE/Prefabs/EnemyWaves/Wave_Boss01.prefab
+  artifactKey: Guid(c3ba1d38d0f94244788e0e558778be23) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Space Shooter Template FREE/Prefabs/EnemyWaves/Wave_Boss01.prefab using Guid(c3ba1d38d0f94244788e0e558778be23) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4c939ddc20d3c49538591e3990e41aa7') in 0.023470 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 3.198718 seconds.
+  path: Assets/Space Shooter Template FREE/Prefabs/EnemyWaves/Wave_Boss01.prefab
+  artifactKey: Guid(c3ba1d38d0f94244788e0e558778be23) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Space Shooter Template FREE/Prefabs/EnemyWaves/Wave_Boss01.prefab using Guid(c3ba1d38d0f94244788e0e558778be23) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '269361725433024f2b7ec50342025334') in 0.014401 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 5.998717 seconds.
+  path: Assets/Space Shooter Template FREE/Prefabs/EnemyWaves/Wave_Boss01.prefab
+  artifactKey: Guid(c3ba1d38d0f94244788e0e558778be23) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Space Shooter Template FREE/Prefabs/EnemyWaves/Wave_Boss01.prefab using Guid(c3ba1d38d0f94244788e0e558778be23) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a76d3f8265225527dd5ac65de2b22708') in 0.014377 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 2.604663 seconds.
+  path: Assets/Space Shooter Template FREE/Prefabs/EnemyWaves/Wave_Boss01.prefab
+  artifactKey: Guid(c3ba1d38d0f94244788e0e558778be23) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Space Shooter Template FREE/Prefabs/EnemyWaves/Wave_Boss01.prefab using Guid(c3ba1d38d0f94244788e0e558778be23) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b1f1e84b55bac8874afda2b78fd7edc4') in 0.012318 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 14.724652 seconds.
+  path: Assets/Space Shooter Template FREE/Prefabs/EnemyWaves/Wave_Boss01.prefab
+  artifactKey: Guid(c3ba1d38d0f94244788e0e558778be23) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Space Shooter Template FREE/Prefabs/EnemyWaves/Wave_Boss01.prefab using Guid(c3ba1d38d0f94244788e0e558778be23) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'edd79911901122b95f54e951d704c07c') in 0.012023 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 6.059821 seconds.
+  path: Assets/Space Shooter Template FREE/Prefabs/EnemyWaves/Wave_Boss01.prefab
+  artifactKey: Guid(c3ba1d38d0f94244788e0e558778be23) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Space Shooter Template FREE/Prefabs/EnemyWaves/Wave_Boss01.prefab using Guid(c3ba1d38d0f94244788e0e558778be23) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '82241c03007977593694e6d3ea6e552b') in 0.013813 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 11.685929 seconds.
+  path: Assets/Space Shooter Template FREE/Prefabs/EnemyWaves/Wave_Boss01.prefab
+  artifactKey: Guid(c3ba1d38d0f94244788e0e558778be23) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Space Shooter Template FREE/Prefabs/EnemyWaves/Wave_Boss01.prefab using Guid(c3ba1d38d0f94244788e0e558778be23) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1a4a6ed795ce3461392169c6778bf3a7') in 0.012518 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 2.801382 seconds.
+  path: Assets/Space Shooter Template FREE/Prefabs/EnemyWaves/Wave_Boss01.prefab
+  artifactKey: Guid(c3ba1d38d0f94244788e0e558778be23) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Space Shooter Template FREE/Prefabs/EnemyWaves/Wave_Boss01.prefab using Guid(c3ba1d38d0f94244788e0e558778be23) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1ec158b44df26382786b14cbebc360cf') in 0.011692 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 9.025806 seconds.
+  path: Assets/Space Shooter Template FREE/Prefabs/EnemyWaves/Wave_Boss01.prefab
+  artifactKey: Guid(c3ba1d38d0f94244788e0e558778be23) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Space Shooter Template FREE/Prefabs/EnemyWaves/Wave_Boss01.prefab using Guid(c3ba1d38d0f94244788e0e558778be23) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ec8b49d47f6e474218fbeb11b26aa6e6') in 0.012426 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 5.099013 seconds.
+  path: Assets/Space Shooter Template FREE/Prefabs/EnemyWaves/Wave_Boss01.prefab
+  artifactKey: Guid(c3ba1d38d0f94244788e0e558778be23) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Space Shooter Template FREE/Prefabs/EnemyWaves/Wave_Boss01.prefab using Guid(c3ba1d38d0f94244788e0e558778be23) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '22452b44fe88040ccf7c8dd4fd9622c6') in 0.014042 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 16.913107 seconds.
+  path: Assets/Space Shooter Template FREE/Prefabs/EnemyWaves/Wave_Boss01.prefab
+  artifactKey: Guid(c3ba1d38d0f94244788e0e558778be23) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Space Shooter Template FREE/Prefabs/EnemyWaves/Wave_Boss01.prefab using Guid(c3ba1d38d0f94244788e0e558778be23) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ab626645634886b44e7b00305ee053b7') in 0.011878 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 4.478529 seconds.
+  path: Assets/Space Shooter Template FREE/Prefabs/EnemyWaves/Wave_Boss01.prefab
+  artifactKey: Guid(c3ba1d38d0f94244788e0e558778be23) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Space Shooter Template FREE/Prefabs/EnemyWaves/Wave_Boss01.prefab using Guid(c3ba1d38d0f94244788e0e558778be23) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4b993991ed6ad65f25a677d6765241d1') in 0.011922 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 7.043976 seconds.
+  path: Assets/Space Shooter Template FREE/Prefabs/EnemyWaves/Wave_Boss01.prefab
+  artifactKey: Guid(c3ba1d38d0f94244788e0e558778be23) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Space Shooter Template FREE/Prefabs/EnemyWaves/Wave_Boss01.prefab using Guid(c3ba1d38d0f94244788e0e558778be23) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '845e00b5804b2dc3cfd988f1cf4f5c88') in 0.014789 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 5.431044 seconds.
+  path: Assets/Space Shooter Template FREE/Prefabs/EnemyWaves/Wave_Boss01.prefab
+  artifactKey: Guid(c3ba1d38d0f94244788e0e558778be23) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Space Shooter Template FREE/Prefabs/EnemyWaves/Wave_Boss01.prefab using Guid(c3ba1d38d0f94244788e0e558778be23) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '339ad8155411cc13fe2570fe5550221b') in 0.012175 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 8.135483 seconds.
+  path: Assets/Space Shooter Template FREE/Prefabs/EnemyWaves/Wave_Boss01.prefab
+  artifactKey: Guid(c3ba1d38d0f94244788e0e558778be23) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Space Shooter Template FREE/Prefabs/EnemyWaves/Wave_Boss01.prefab using Guid(c3ba1d38d0f94244788e0e558778be23) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f1c48d4c3801a77b53bcc5328191c31c') in 0.012265 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 6.010927 seconds.
+  path: Assets/Space Shooter Template FREE/Prefabs/EnemyWaves/Wave_Boss01.prefab
+  artifactKey: Guid(c3ba1d38d0f94244788e0e558778be23) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Space Shooter Template FREE/Prefabs/EnemyWaves/Wave_Boss01.prefab using Guid(c3ba1d38d0f94244788e0e558778be23) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e6461428302fb21526b008dbe0bb6e8d') in 0.012328 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 2.401353 seconds.
+  path: Assets/Space Shooter Template FREE/Prefabs/EnemyWaves/Wave_Boss01.prefab
+  artifactKey: Guid(c3ba1d38d0f94244788e0e558778be23) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Space Shooter Template FREE/Prefabs/EnemyWaves/Wave_Boss01.prefab using Guid(c3ba1d38d0f94244788e0e558778be23) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '79aac88283a540554517ac6301d9c320') in 0.013218 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 3.021443 seconds.
+  path: Assets/Space Shooter Template FREE/Prefabs/EnemyWaves/Wave_Boss01.prefab
+  artifactKey: Guid(c3ba1d38d0f94244788e0e558778be23) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Space Shooter Template FREE/Prefabs/EnemyWaves/Wave_Boss01.prefab using Guid(c3ba1d38d0f94244788e0e558778be23) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8128c8b75971cc5a02fc80793bb2dd5a') in 0.014733 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 2.463984 seconds.
+  path: Assets/Space Shooter Template FREE/Prefabs/EnemyWaves/Wave_Boss01.prefab
+  artifactKey: Guid(c3ba1d38d0f94244788e0e558778be23) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Space Shooter Template FREE/Prefabs/EnemyWaves/Wave_Boss01.prefab using Guid(c3ba1d38d0f94244788e0e558778be23) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e1b0c50bd9c0314c06b55d23f7d67a02') in 0.015893 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 5.797953 seconds.
+  path: Assets/Space Shooter Template FREE/Prefabs/EnemyWaves/Wave_Boss01.prefab
+  artifactKey: Guid(c3ba1d38d0f94244788e0e558778be23) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Space Shooter Template FREE/Prefabs/EnemyWaves/Wave_Boss01.prefab using Guid(c3ba1d38d0f94244788e0e558778be23) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4942ab6e9c13e8e73bc3c443db588beb') in 0.015568 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 2.346475 seconds.
+  path: Assets/Space Shooter Template FREE/Prefabs/EnemyWaves/Wave_Boss01.prefab
+  artifactKey: Guid(c3ba1d38d0f94244788e0e558778be23) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Space Shooter Template FREE/Prefabs/EnemyWaves/Wave_Boss01.prefab using Guid(c3ba1d38d0f94244788e0e558778be23) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8eeb3c38378f67c624377a434e12f327') in 0.014295 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 11.869823 seconds.
+  path: Assets/Space Shooter Template FREE/Prefabs/EnemyWaves/Wave_Boss01.prefab
+  artifactKey: Guid(c3ba1d38d0f94244788e0e558778be23) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Space Shooter Template FREE/Prefabs/EnemyWaves/Wave_Boss01.prefab using Guid(c3ba1d38d0f94244788e0e558778be23) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bfbf1aa4fd9b6ef1d4e174f6abc5bf92') in 0.014119 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 2.998851 seconds.
+  path: Assets/Space Shooter Template FREE/Prefabs/EnemyWaves/Wave_Boss01.prefab
+  artifactKey: Guid(c3ba1d38d0f94244788e0e558778be23) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Space Shooter Template FREE/Prefabs/EnemyWaves/Wave_Boss01.prefab using Guid(c3ba1d38d0f94244788e0e558778be23) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0e6095c272be38562734013698f2737f') in 0.013066 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 10.688554 seconds.
+  path: Assets/Space Shooter Template FREE/Prefabs/EnemyWaves/Wave_Boss01.prefab
+  artifactKey: Guid(c3ba1d38d0f94244788e0e558778be23) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Space Shooter Template FREE/Prefabs/EnemyWaves/Wave_Boss01.prefab using Guid(c3ba1d38d0f94244788e0e558778be23) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fd44cfd4a57778b3758098e8d8d5a64d') in 0.011616 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 8.529179 seconds.
+  path: Assets/Space Shooter Template FREE/Prefabs/Enemies/Enemy_straight_projectile 1.prefab
+  artifactKey: Guid(fb1ed255a78dcc043ad348fccc59298c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Space Shooter Template FREE/Prefabs/Enemies/Enemy_straight_projectile 1.prefab using Guid(fb1ed255a78dcc043ad348fccc59298c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0a0cedcf3594f2b6b72bc7a3311e02ae') in 0.046915 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 19.299408 seconds.
+  path: Assets/Space Shooter Template FREE/Prefabs/Enemies/Enemy_Boss01.prefab
+  artifactKey: Guid(fb1ed255a78dcc043ad348fccc59298c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Space Shooter Template FREE/Prefabs/Enemies/Enemy_Boss01.prefab using Guid(fb1ed255a78dcc043ad348fccc59298c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f62c2431e7cf1bfed4fc6cadaad38960') in 0.027741 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 16.349186 seconds.
+  path: Assets/2D Space Kit/Background Elements/Planets/Earthlike 2.png
+  artifactKey: Guid(3442ac8dad963a747bb2692857498584) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/2D Space Kit/Background Elements/Planets/Earthlike 2.png using Guid(3442ac8dad963a747bb2692857498584) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'aa071f0c0e0593d94b482f9c1b71829b') in 6.410605 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000028 seconds.
+  path: Assets/Warped Shooting Fx/Pixel Art/Hits/Hit-1/hits-1-3.png
+  artifactKey: Guid(31d43573bd1494325a6a26547683d90f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Warped Shooting Fx/Pixel Art/Hits/Hit-1/hits-1-3.png using Guid(31d43573bd1494325a6a26547683d90f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '12dc32a632c96970b7381eefe6870555') in 0.124097 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000035 seconds.
+  path: Assets/Space Shooter Template FREE/Sprites/VFX/Engines/Engine_01_Effect.png
+  artifactKey: Guid(99a711709045c58409b66e71ee2b3e1a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Space Shooter Template FREE/Sprites/VFX/Engines/Engine_01_Effect.png using Guid(99a711709045c58409b66e71ee2b3e1a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2163fdab22acad89ba2738925c014bdb') in 0.036965 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000025 seconds.
+  path: Assets/2D Space Kit/Backgrounds/Fantasy Purple 2048/Fantasy 6.jpg
+  artifactKey: Guid(cf301a0922f974b479929d2f98cf7180) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/2D Space Kit/Backgrounds/Fantasy Purple 2048/Fantasy 6.jpg using Guid(cf301a0922f974b479929d2f98cf7180) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ffb8b46e11cc4b6d02fbd42da2063fc5') in 0.723644 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000038 seconds.
+  path: Assets/Space Shooter Template FREE/Sprites/VFX/Engines/Engine_01_Effect_Sphere.png
+  artifactKey: Guid(e3bcfb1e47421ab4786c4ad4a7965935) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Space Shooter Template FREE/Sprites/VFX/Engines/Engine_01_Effect_Sphere.png using Guid(e3bcfb1e47421ab4786c4ad4a7965935) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ad99a8f9c436893518ba68ec1bc2e968') in 0.037131 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000503 seconds.
+  path: Assets/Space Shooter Template FREE/Sprites/VFX/Engines/Engine_01_Basic.png
+  artifactKey: Guid(b57e9fd4004e73c4486d446c026d338b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Space Shooter Template FREE/Sprites/VFX/Engines/Engine_01_Basic.png using Guid(b57e9fd4004e73c4486d446c026d338b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '236fe957f0629908af693d9a8915e908') in 0.172163 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000022 seconds.
+  path: Assets/Warped Shooting Fx/Pixel Art/Hits/Hit-1/hits-1-5.png
+  artifactKey: Guid(99e36729618df468b8a418b22c04d92d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Warped Shooting Fx/Pixel Art/Hits/Hit-1/hits-1-5.png using Guid(99e36729618df468b8a418b22c04d92d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e84146e0c95aaf815b323a144bcd9c5f') in 0.028063 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000027 seconds.
+  path: Assets/2D Space Kit/Background Elements/Planets/Gas 1.png
+  artifactKey: Guid(d83a39fbdcc73354d815cab77c2f64e6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/2D Space Kit/Background Elements/Planets/Gas 1.png using Guid(d83a39fbdcc73354d815cab77c2f64e6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '77aadfe83caa6b1aca312f043e28b820') in 0.556816 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000046 seconds.
+  path: Assets/2D Space Kit/Particles (Sprites)/Explosion.png
+  artifactKey: Guid(d30a353fc5e62e445b58e341d953d45e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/2D Space Kit/Particles (Sprites)/Explosion.png using Guid(d30a353fc5e62e445b58e341d953d45e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ae69b3c87428288fcc3b2e0e4e5289dc') in 0.257746 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000031 seconds.
+  path: Assets/Warped Shooting Fx/Pixel Art/Hits/Hit-4/hits-4-5.png
+  artifactKey: Guid(96d9343b937724d6ba0040b24b3776de) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Warped Shooting Fx/Pixel Art/Hits/Hit-4/hits-4-5.png using Guid(96d9343b937724d6ba0040b24b3776de) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0fa5fe1bebee91dd02ddc01a69a14797') in 0.321345 seconds 
+Editor requested this worker to shutdown with reason: Scaling down because of idle timeout
+AssetImportWorker is now disconnected from the server
+Process exiting
+Exiting without the bug reporter. Application will terminate with return code 0
