@@ -140,12 +140,20 @@ PrefabInstance:
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4923957858404230, guid: 8e33fda0c220936498f5288af83d7450, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.4609
+      objectReference: {fileID: 0}
+    - target: {fileID: 4923957858404230, guid: 8e33fda0c220936498f5288af83d7450, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.4874
+      objectReference: {fileID: 0}
+    - target: {fileID: 4923957858404230, guid: 8e33fda0c220936498f5288af83d7450, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -0.717
       objectReference: {fileID: 0}
     - target: {fileID: 4923957858404230, guid: 8e33fda0c220936498f5288af83d7450, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -6.59
+      value: -7.2539
       objectReference: {fileID: 0}
     - target: {fileID: 4923957858404230, guid: 8e33fda0c220936498f5288af83d7450, type: 3}
       propertyPath: m_LocalPosition.z
@@ -247,6 +255,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4868786349923552, guid: 01cf4a33fc66cde4abc060ccfeadeb5a, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4984263745758592, guid: 01cf4a33fc66cde4abc060ccfeadeb5a, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -286,8 +298,14 @@ PrefabInstance:
     - target: {fileID: 114004447756405556, guid: 01cf4a33fc66cde4abc060ccfeadeb5a,
         type: 3}
       propertyPath: enemyWaves.Array.size
-      value: 19
+      value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 114004447756405556, guid: 01cf4a33fc66cde4abc060ccfeadeb5a,
+        type: 3}
+      propertyPath: enemyWaves.Array.data[0].wave
+      value: 
+      objectReference: {fileID: 1643244333601292, guid: c3ba1d38d0f94244788e0e558778be23,
+        type: 3}
     - target: {fileID: 114004447756405556, guid: 01cf4a33fc66cde4abc060ccfeadeb5a,
         type: 3}
       propertyPath: enemyWaves.Array.data[18].wave

@@ -29,6 +29,7 @@ public class CharacterController : MonoBehaviour
     public FloorController floorControl_;
 
     public bool isGrounded_;
+
     
     // Start is called before the first frame update
     void Start()
