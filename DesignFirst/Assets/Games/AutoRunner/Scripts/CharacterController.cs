@@ -30,7 +30,9 @@ public class CharacterController : MonoBehaviour
 
     public bool isGrounded_;
 
-    
+    public GameObject particleObj_;
+    public GameObject particleObjPrefab_;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -177,18 +179,30 @@ public class CharacterController : MonoBehaviour
             
             //anim_.SetBool("falling_", false);
 
+            
             if (Input.GetKey(KeyCode.Space))
             {
                 rb_.AddForce(Vector3.up * jumpForce_, ForceMode.Impulse);
                 // anim_.SetBool("ground", false);
                 // anim_.Play("Jump");
-                ActivateParticles();
+                // ActivateParticles();
+                if(null == particleObj_)
+                {
+                    particleObj_ = Instantiate(particleObjPrefab_, this.transform.position, Quaternion.identity);
+                    particleObj_.transform.SetParent(this.transform);
+                }else
+                {
+                    Destroy(particleObj_);
+                    particleObj_ = null;
+                    particleObj_ = Instantiate(particleObjPrefab_, this.transform.position, Quaternion.identity);
+                    particleObj_.transform.SetParent(this.transform);
+                }
             }
             ChangeAnimationState("Run");
             isGrounded_ = true;
             mainCamera_.fieldOfView = Mathf.Lerp(mainCamera_.fieldOfView, 60, 0.01f);
 
-            DeactivateParticleSystem();
+            // DeactivateParticleSystem();
         }
         else
         {
@@ -199,6 +213,7 @@ public class CharacterController : MonoBehaviour
             mainCamera_.fieldOfView = Mathf.Lerp(mainCamera_.fieldOfView, 80, 0.01f);
             ChangeAnimationState("Jump");
             isGrounded_ = false;
+
         }
         Debug.DrawRay(this.transform.position, Vector3.down * FallingCastDistance_, Color.red);
 

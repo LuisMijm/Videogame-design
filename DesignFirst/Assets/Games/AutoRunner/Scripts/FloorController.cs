@@ -67,18 +67,18 @@ public class FloorController : MonoBehaviour
 
         platforms.Add(tempPlatform);
 
-        for(int i = 0; i < Random.Range(0, 5); ++i)
-        {
-            Vector3 coinPosition = new Vector3(
-                Random.Range(tempPlatform.transform.position.x, tempPlatform.transform.position.x + tempPlatform.transform.position.x),
-                tempPlatform.transform.position.y + 3,
-                Random.Range(tempPlatform.transform.position.z, tempPlatform.transform.position.z + tempPlatform.transform.position.z)
-            );
+        // for(int i = 0; i < Random.Range(0, 5); ++i)
+        // {
+        //     Vector3 coinPosition = new Vector3(
+        //         Random.Range(tempPlatform.transform.position.x, tempPlatform.transform.position.x + tempPlatform.transform.position.x),
+        //         tempPlatform.transform.position.y + 3,
+        //         Random.Range(tempPlatform.transform.position.z, tempPlatform.transform.position.z + tempPlatform.transform.position.z)
+        //     );
 
-            GameObject Coin = Instantiate(coinPrefab_, coinPosition, Quaternion.identity);
-            // coin.transform.LookAt(Vector3.zero);
-            Coins.Add(Coin);
-        }
+        //     GameObject Coin = Instantiate(coinPrefab_, coinPosition, Quaternion.identity);
+        //     // coin.transform.LookAt(Vector3.zero);
+        //     Coins.Add(Coin);
+        // }
     }
 
     public void newGeneration()
@@ -99,8 +99,8 @@ public class FloorController : MonoBehaviour
                     cPlatform_.transform.position.y + 2.0f,
                     Random.Range(cPlatform_.transform.position.z, cPlatform_.transform.position.z + cPlatform_.transform.position.z)
                 );
-                GameObject Coin = Instantiate(coinPrefab_, coinPosition, Quaternion.identity);
-                Coins.Add(Coin);
+                // GameObject Coin = Instantiate(coinPrefab_, coinPosition, Quaternion.identity);
+                // Coins.Add(Coin);
                 
             }
         }
