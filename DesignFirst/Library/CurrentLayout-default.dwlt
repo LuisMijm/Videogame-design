@@ -14,14 +14,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_PixelRect:
     serializedVersion: 2
-    x: -1920
-    y: 385.85715
+    x: 0
+    y: 43
     width: 1920
-    height: 989
+    height: 997
   m_ShowMode: 4
-  m_Title: Game
+  m_Title: Console
   m_RootView: {fileID: 2}
-  m_MinSize: {x: 875, y: 492}
+  m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
   m_Maximized: 1
 --- !u!114 &2
@@ -45,8 +45,8 @@ MonoBehaviour:
     x: 0
     y: 0
     width: 1920
-    height: 989
-  m_MinSize: {x: 875, y: 492}
+    height: 997
+  m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
   m_UseTopView: 1
   m_TopViewHeight: 30
@@ -90,7 +90,7 @@ MonoBehaviour:
   m_Position:
     serializedVersion: 2
     x: 0
-    y: 969
+    y: 977
     width: 1920
     height: 20
   m_MinSize: {x: 0, y: 0}
@@ -115,11 +115,11 @@ MonoBehaviour:
     x: 0
     y: 30
     width: 1920
-    height: 939
+    height: 947
   m_MinSize: {x: 579, y: 442}
   m_MaxSize: {x: 12004, y: 8042}
   vertical: 0
-  controlID: 12858
+  controlID: 19
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -140,11 +140,11 @@ MonoBehaviour:
     x: 0
     y: 0
     width: 1433
-    height: 939
+    height: 947
   m_MinSize: {x: 303, y: 442}
   m_MaxSize: {x: 8003, y: 8042}
   vertical: 1
-  controlID: 12859
+  controlID: 91
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -163,9 +163,9 @@ MonoBehaviour:
     x: 0
     y: 0
     width: 1433
-    height: 498
-  m_MinSize: {x: 201, y: 221}
-  m_MaxSize: {x: 4001, y: 4021}
+    height: 502
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 12}
   m_Panes:
   - {fileID: 13}
@@ -192,13 +192,13 @@ MonoBehaviour:
   m_Position:
     serializedVersion: 2
     x: 0
-    y: 498
+    y: 502
     width: 1433
-    height: 441
+    height: 445
   m_MinSize: {x: 303, y: 221}
   m_MaxSize: {x: 8003, y: 4021}
   vertical: 0
-  controlID: 12918
+  controlID: 29
 --- !u!114 &9
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -217,9 +217,9 @@ MonoBehaviour:
     x: 0
     y: 0
     width: 1092
-    height: 441
-  m_MinSize: {x: 101, y: 121}
-  m_MaxSize: {x: 4001, y: 4021}
+    height: 445
+  m_MinSize: {x: 100, y: 100}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 17}
   m_Panes:
   - {fileID: 16}
@@ -244,9 +244,9 @@ MonoBehaviour:
     x: 1092
     y: 0
     width: 341
-    height: 441
-  m_MinSize: {x: 202, y: 221}
-  m_MaxSize: {x: 4002, y: 4021}
+    height: 445
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 18}
   m_Panes:
   - {fileID: 18}
@@ -270,9 +270,9 @@ MonoBehaviour:
     x: 1433
     y: 0
     width: 487
-    height: 939
-  m_MinSize: {x: 276, y: 71}
-  m_MaxSize: {x: 4001, y: 4021}
+    height: 947
+  m_MinSize: {x: 275, y: 50}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 19}
   m_Panes:
   - {fileID: 19}
@@ -298,10 +298,10 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: -1920
-    y: 415.85715
+    x: 0
+    y: 73
     width: 1432
-    height: 477
+    height: 481
   m_ViewDataDictionary: {fileID: 0}
   m_SerializedViewNames: []
   m_SerializedViewValues: []
@@ -346,22 +346,22 @@ MonoBehaviour:
       x: 0
       y: 21
       width: 1432
-      height: 456
-    m_Scale: {x: 0.42222223, y: 0.42222223}
-    m_Translation: {x: 716, y: 228}
+      height: 460
+    m_Scale: {x: 0.42592594, y: 0.42592594}
+    m_Translation: {x: 716, y: 230.00002}
     m_MarginLeft: 0
     m_MarginRight: 0
     m_MarginTop: 0
     m_MarginBottom: 0
     m_LastShownAreaInsideMargins:
       serializedVersion: 2
-      x: -1695.7894
+      x: -1681.0435
       y: -540
-      width: 3391.5789
+      width: 3362.087
       height: 1080
     m_MinimalGUI: 1
-  m_defaultScale: 0.42222223
-  m_LastWindowPixelSize: {x: 1432, y: 477}
+  m_defaultScale: 0.42592594
+  m_LastWindowPixelSize: {x: 1432, y: 481}
   m_ClearInEditMode: 1
   m_NoCameraWarning: 1
   m_LowResolutionForAspectRatios: 01000000000000000000
@@ -454,7 +454,7 @@ MonoBehaviour:
   m_Rotation:
     m_Target: {x: 0.13464063, y: 0.6262811, z: -0.11097813, w: 0.7598213}
     speed: 2
-    m_Value: {x: 0.13464063, y: 0.6262811, z: -0.11097813, w: 0.7598213}
+    m_Value: {x: 0.1346406, y: 0.6262809, z: -0.1109781, w: 0.7598211}
   m_Size:
     m_Target: 10
     speed: 2
@@ -622,7 +622,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: e6600000
     m_LastClickedID: 24806
-    m_ExpandedIDs: 00000000ca60000000ca9a3b
+    m_ExpandedIDs: 00000000466d0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -650,7 +650,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000ca60000000ca9a3b
+    m_ExpandedIDs: 00000000466d0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -726,10 +726,10 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: -1920
-    y: 913.8572
+    x: 0
+    y: 575
     width: 1091
-    height: 420
+    height: 424
   m_ViewDataDictionary: {fileID: 0}
 --- !u!114 &18
 MonoBehaviour:
@@ -751,17 +751,17 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: -828
-    y: 913.8572
+    x: 1092
+    y: 575
     width: 339
-    height: 420
+    height: 424
   m_ViewDataDictionary: {fileID: 0}
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 42a60000
-      m_LastClickedID: 42562
-      m_ExpandedIDs: 047ffbff5c7ffbff7280fbfffe07fcffc8f8ffff54fbffff4a5200009c520000c6520000
+      m_SelectedIDs: 
+      m_LastClickedID: 0
+      m_ExpandedIDs: 0273ffff4273ffff4873ffffc674ffff0475ffff0a75ffffc075fffffe75ffff1477ffff24eaffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -805,10 +805,10 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: -487
-    y: 415.85715
+    x: 1433
+    y: 73
     width: 486
-    height: 918
+    height: 926
   m_ViewDataDictionary: {fileID: 0}
   m_ObjectsLockedBeforeSerialization: []
   m_InstanceIDsLockedBeforeSerialization: 

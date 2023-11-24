@@ -75,35 +75,35 @@ ScriptsOnlyBuild:
     - Class: 111
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 2076}
+      Script: {instanceID: 2164}
     - Class: 114
-      Script: {instanceID: 2470}
+      Script: {instanceID: 2558}
     - Class: 114
-      Script: {instanceID: 2666}
+      Script: {instanceID: 2754}
     - Class: 114
-      Script: {instanceID: 2982}
+      Script: {instanceID: 3070}
     - Class: 114
-      Script: {instanceID: 3864}
+      Script: {instanceID: 3952}
     - Class: 114
-      Script: {instanceID: 4098}
+      Script: {instanceID: 4186}
     - Class: 114
-      Script: {instanceID: 4744}
+      Script: {instanceID: 4832}
     - Class: 114
-      Script: {instanceID: 5270}
+      Script: {instanceID: 5358}
     - Class: 114
-      Script: {instanceID: 5416}
+      Script: {instanceID: 5504}
     - Class: 114
-      Script: {instanceID: 5514}
+      Script: {instanceID: 5602}
     - Class: 114
-      Script: {instanceID: 5720}
+      Script: {instanceID: 5808}
     - Class: 114
-      Script: {instanceID: 5776}
+      Script: {instanceID: 5864}
     - Class: 114
-      Script: {instanceID: 6598}
+      Script: {instanceID: 6686}
     - Class: 114
-      Script: {instanceID: 6984}
+      Script: {instanceID: 7072}
     - Class: 114
-      Script: {instanceID: 7316}
+      Script: {instanceID: 7404}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -942,4 +942,4 @@ ScriptsOnlyBuild:
   platform: 19
   scenePathNames:
   - Assets/Scenes/AutorunnerScene.unity
-  playerPath: C:/Users/lumij/Documents/Segundo_Prg/Videogame-design/DesignFirst/DesignFirst.exe
+  playerPath: C:/Users/jimenezmu/Documents/Videogame-design/Autorunner/DesignFirst.exe

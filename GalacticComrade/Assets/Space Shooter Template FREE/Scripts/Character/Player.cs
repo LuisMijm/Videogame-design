@@ -22,7 +22,9 @@ public class Player : MonoBehaviour
     //method for damage proceccing by 'Player'
     public void GetDamage(int damage)   
     {
-        Destruction();
+        //Lose a perk until 0 perks and 0 shield
+
+        //Destruction();
     }    
 
     //'Player's' destruction procedure
